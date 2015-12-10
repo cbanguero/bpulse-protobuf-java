@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>bpulse-protobuf-java</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          setupLanguages(["shell"]);
+        });
+      </script>
+  </head>
+
+  <body class="index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>© Bpulse 2015</a></li>
+            <li><a href='www.bpulse.io'>www.bpulse.io</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="bpulse-protobuf-java">bpulse-protobuf-java</h1>
+
+<p>bpulse-protobuf-java is the model interface which bpulse relies on in order to send messages with pulses
+to the collector, it is a mandatory dependency of <a href="https://github.com/bpulse/bpulse-sdk-java">bpulse-sdk-java</a>  or bpulse-java-client in order to compile it and send messages to the collector.</p>
+
+<h1 id="requirements">Requirements</h1>
+
+<ul>
+<li>Linux Packages (Linux only):
+
+<ul>
+<li>autoconf</li>
+<li>libtool</li>
+</ul></li>
+<li><a href="https://maven.apache.org/download.cgi">Apache Maven 3.x.x</a></li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">JDK version 1.7+</a></li>
+</ul>
+
+<h2 id="protocol-buffers-2-5-0">Protocol Buffers 2.5.0</h2>
+
+<p>In order to build this project you need to install protoc on your machine, it is very important that you use specifically the <em>2.5.0</em> version otherwise the project might not compile. </p>
+
+<p>The instructions for each OS are the following:</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>Use the provided distribution in this repository under /protobuf/windows/protoc-2.5.0-win32.rar
+unpack it wherever you want.
+Edit your environment variables adding one that points to the unpackaged folder like <strong>PROTOC_HOME</strong></p>
+
+<p>e.g. <strong>PROTOC_HOME</strong>=C:\software\protoc</p>
+
+<p>Then edit your <strong>PATH</strong> variable appending the new variable</p>
+
+<p>e.g. <strong>PATH</strong>=[other_variables];%<strong>PROTOC_HOME</strong>%</p>
+
+<p>You can check if the installation was ok by opening a terminal and executing the following command:</p>
+<pre class="highlight plaintext"><code>protoc --version
+</code></pre>
+
+<p>You should see this output:
+<code class="prettyprint">
+libprotoc 2.5.0
+</code></p>
+
+<h3 id="linux">Linux</h3>
+
+<p>Use the provided distribution in this repository under /protobuf/linux/protobuf-2.5.0.tar.gz
+unpackit wherever you want.</p>
+
+<p><strong>Note:</strong> At this point you should have installed the two linux packages mentioned above.</p>
+
+<blockquote>
+<p>Open a terminal and go to where you unpacked the file, then execute the following commands (one by one):</p>
+</blockquote>
+<pre class="highlight plaintext"><code>$ ./autogen.sh
+$ ./configure
+$ ./make
+$ ./make install
+</code></pre>
+
+<p><strong>Note:</strong> The make install commad may require sudo</p>
+
+<blockquote>
+<p>After that, you can check if everything succeded by executin the command:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>$ protoc --version
+</code></pre>
+
+<blockquote>
+<p>If you don&rsquo;t receive a message like:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>libprotoc 2.5.0
+</code></pre>
+
+<blockquote>
+<p>Then execute the following:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>$ sudo ldconfig
+</code></pre>
+
+<p>And check again.</p>
+
+<h3 id="osx">OSX</h3>
+
+<p>The easies way is to use homebrew package manager to install it, please take a look at <a href="http://stackoverflow.com/questions/21775151/installing-google-protocol-buffers-on-mac">this post</a></p>
+
+<h1 id="build">Build</h1>
+
+<p>Once you checked out the sources, in a terminal go to the repo folder and type</p>
+<pre class="highlight plaintext"><code>$ mvn clean install
+</code></pre>
+
+<p>It&rsquo;s done!, now you can build the bpulse-sdk-java</p>
+
+<h1 id="contact-us">Contact us</h1>
+
+<p>You can reach the Developer Platform team at jtenganan@innova4j.com</p>
+
+<h1 id="license">License</h1>
+
+<p>The Bpulse Protobuf Java is licensed under the Apache License 2.0. Details can be found in the LICENSE file.</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
