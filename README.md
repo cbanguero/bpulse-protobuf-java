@@ -22,7 +22,7 @@ Use the provided distribution in this repository under /protobuf/windows/protoc-
 unpack it wherever you want.
 Edit your environment variables adding one that points to the unpackaged folder like **PROTOC_HOME**
 
-e.g. **PROTOC_HOME**=C:\software\protoc
+e.g. **PROTOC_HOME**=C:\software\protoc-2.5.0-win32.rar
 
 Then edit your **PATH** variable appending the new variable
 
